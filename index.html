@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f3ea" />
+  <title>Email Celestial — Beta</title>
+  <meta name="description" content="Escribe lo que llevas en el corazón. Encuentra esperanza en la Palabra." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section id="home" class="screen active">
+      <div class="brand-mark">✉</div>
+      <p class="eyebrow">PROYECTO CON PROPÓSITO</p>
+      <h1>Email Celestial</h1>
+      <p class="tagline">Escribe lo que llevas en el corazón.<br>Encuentra esperanza en la Palabra.</p>
+      <p class="intro">
+        Un espacio privado para expresar con sinceridad tus luchas, preguntas, agradecimientos y oraciones.
+        Recibirás una respuesta de acompañamiento y esperanza basada en principios bíblicos.
+      </p>
+      <div class="notice">
+        <strong>Importante:</strong> Email Celestial no pretende hablar en nombre de Dios ni sustituye a un pastor,
+        profesional de salud o ayuda de emergencia. La tecnología trabaja detrás para ayudarte a reflexionar
+        a la luz de la Biblia.
+      </div>
+      <button class="primary" id="startBtn">Escribir mi carta</button>
+      <p class="micro">Beta privada · Primera carta sin costo · Mayores de 18 años</p>
+    </section>
+
+    <section id="write" class="screen">
+      <button class="link-btn" data-go="home">← Volver</button>
+      <p class="eyebrow">TU CARTA</p>
+      <h2>Escribe con libertad</h2>
+      <p class="intro small">No necesitas ordenar tus ideas ni usar palabras perfectas. Escribe como realmente te sientes.</p>
+
+      <div class="form-card">
+        <label>Tu nombre o cómo quieres que te llamemos
+          <input id="name" maxlength="60" placeholder="Ej. María" autocomplete="name" />
+        </label>
+        <label>Tu email
+          <input id="email" type="email" maxlength="120" placeholder="tu@email.com" autocomplete="email" />
+        </label>
+        <label>Asunto
+          <input id="subject" maxlength="100" placeholder="Ej. Ayúdame, Gracias, Tengo miedo..." />
+        </label>
+        <label>Mi carta
+          <textarea id="letter" rows="13" maxlength="8000" placeholder="Padre mío... hoy quiero contarte lo que llevo dentro."></textarea>
+        </label>
+        <div class="consent">
+          <label class="checkrow">
+            <input id="ageConsent" type="checkbox">
+            <span>Confirmo que tengo 18 años o más y acepto el procesamiento de lo que escribo para generar mi respuesta.</span>
+          </label>
+          <label class="checkrow">
+            <input id="reviewConsent" type="checkbox">
+            <span>Opcional: autorizo que el equipo de esta beta revise esta carta y su respuesta para mejorar Email Celestial.</span>
+          </label>
+        </div>
+      </div>
+
+      <div id="formError" class="error" role="alert"></div>
+      <button class="primary" id="sendBtn">Enviar mi carta ✉</button>
+      <p class="micro">No compartas contraseñas, datos bancarios ni información que no quieras procesar.</p>
+    </section>
+
+    <section id="waiting" class="screen center">
+      <div class="envelope">💌</div>
+      <h2>Tu carta ha sido recibida</h2>
+      <p class="intro">Estamos preparando una respuesta con cuidado, esperanza y fundamento bíblico.</p>
+      <div class="loader"><span></span></div>
+      <p class="micro">No necesitas ser fuerte ni saber cómo pedir perfectamente.</p>
+    </section>
+
+    <section id="response" class="screen">
+      <div class="letter-top">
+        <span class="pill">TU RESPUESTA</span>
+        <button class="link-btn" data-go="home">Inicio</button>
+      </div>
+      <article class="response-letter">
+        <p class="meta" id="responseMeta"></p>
+        <h2 id="responseTitle">Sobre lo que llevas en tu corazón…</h2>
+        <div id="responseBody"></div>
+      </article>
+
+      <div class="actions">
+        <button class="secondary" id="surveyBtn">Contar cómo me sentí</button>
+        <button class="primary" id="anotherBtn">Escribir otra carta</button>
+      </div>
+      <p id="emailNote" class="micro"></p>
+    </section>
+
+    <section id="survey" class="screen">
+      <button class="link-btn" data-go="response">← Volver a mi respuesta</button>
+      <p class="eyebrow">AYÚDANOS A MEJORAR</p>
+      <h2>Tu experiencia importa</h2>
+      <p class="intro small">Estas respuestas nos ayudarán a decidir si Email Celestial merece convertirse en una plataforma completa.</p>
+
+      <div class="form-card">
+        <fieldset>
+          <legend>1. ¿Sentiste que la respuesta comprendió lo que escribiste?</legend>
+          <div class="scale" data-name="understood"></div>
+        </fieldset>
+        <fieldset>
+          <legend>2. ¿La respuesta te dio esperanza, paz o claridad?</legend>
+          <div class="scale" data-name="hope"></div>
+        </fieldset>
+        <fieldset>
+          <legend>3. ¿Volverías a usar Email Celestial?</legend>
+          <label class="radio"><input type="radio" name="returnUse" value="Sí"> Sí</label>
+          <label class="radio"><input type="radio" name="returnUse" value="Tal vez"> Tal vez</label>
+          <label class="radio"><input type="radio" name="returnUse" value="No"> No</label>
+        </fieldset>
+        <fieldset>
+          <legend>4. Si existiera una membresía de US$6.99/mes, ¿considerarías pagarla?</legend>
+          <label class="radio"><input type="radio" name="wouldPay" value="Sí"> Sí</label>
+          <label class="radio"><input type="radio" name="wouldPay" value="Tal vez"> Tal vez</label>
+          <label class="radio"><input type="radio" name="wouldPay" value="No"> No</label>
+        </fieldset>
+        <label>¿Qué fue lo que más te gustó o qué cambiarías?
+          <textarea id="comments" rows="5" maxlength="1500" placeholder="Cuéntanos con total sinceridad..."></textarea>
+        </label>
+      </div>
+      <div id="surveyError" class="error"></div>
+      <button class="primary" id="submitSurveyBtn">Enviar mi opinión</button>
+    </section>
+
+    <section id="thanks" class="screen center">
+      <div class="envelope">♡</div>
+      <h2>Gracias por confiar en este proyecto</h2>
+      <p class="intro">Tu experiencia ayudará a construir una versión de Email Celestial que acompañe a muchas más personas con respeto, esperanza y fundamento bíblico.</p>
+      <button class="secondary" data-go="home">Volver al inicio</button>
+    </section>
+  </main>
+
+  <footer>
+    <span>Email Celestial · Beta 0.1</span>
+    <span>Privacidad · Propósito · Esperanza</span>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
