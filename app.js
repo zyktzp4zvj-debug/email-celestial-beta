@@ -31,7 +31,6 @@ document.getElementById("sendBtn").addEventListener("click", async () => {
   const subject = document.getElementById("subject").value.trim();
   const letter = document.getElementById("letter").value.trim();
   const ageConsent = document.getElementById("ageConsent").checked;
-  const reviewConsent = document.getElementById("reviewConsent").checked;
   const err = document.getElementById("formError");
   err.textContent = "";
 
@@ -47,7 +46,7 @@ document.getElementById("sendBtn").addEventListener("click", async () => {
     const res = await fetch("/api/respond", {
       method:"POST",
       headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({name,email,subject,letter,reviewConsent})
+      body:JSON.stringify({name,email,subject,letter})
     });
     const data = await res.json();
     if(!res.ok) throw new Error(data.error || "No pudimos preparar tu respuesta.");
