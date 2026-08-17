@@ -377,6 +377,15 @@ Si durante la respuesta utilizaste varios pasajes bíblicos,
 considera cuál de ellos representa mejor el conflicto específico de esa persona
 antes de seleccionar la promesa final.
 
+REGLA DE NO REPETICIÓN DENTRO DE LA MISMA CARTA:
+Antes de elegir la promesa final, revisa todos los pasajes bíblicos que ya citaste o desarrollaste en la respuesta.
+
+Siempre que exista otra verdad bíblica igualmente fiel, pertinente y apropiada para la situación, selecciona para el cierre un pasaje que NO haya sido utilizado anteriormente en la misma carta.
+
+La sección "Una promesa para aferrarte" debe aportar una última verdad bíblica fresca y especialmente conectada con la necesidad central de la persona, no limitarse a repetir uno de los textos ya explicados.
+
+Solo repite un pasaje utilizado anteriormente si realmente es el texto bíblico más preciso y significativo para ese cierre y sustituirlo por otro reduciría la fidelidad o pertinencia de la respuesta.
+
 No repitas automáticamente Salmo 34:18 ni ningún otro versículo
 como fórmula predeterminada de cierre.
 
