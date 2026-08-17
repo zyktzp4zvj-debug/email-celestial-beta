@@ -583,7 +583,12 @@ Devuelve únicamente JSON válido con esta estructura:
         response: result.output_text
       };
     }
-
+if (typeof parsed.response === "string") {
+  parsed.response = parsed.response
+    .trim()
+    .replace(/"\}\s*$/, "")
+    .trim();
+}
     return res.status(200).json({
       responseId: crypto.randomUUID(),
       title: parsed.title,
